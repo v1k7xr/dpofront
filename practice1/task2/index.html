@@ -1,0 +1,104 @@
+<html>
+   <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Task 1</title>
+    <script type = "text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   </head>
+   <body>
+    <div id = "all_resume">
+        <div class="container-fluid">
+            <div class="row">
+                <br>
+                <div class="col-md-6">
+                    <p>Введите информацию о себе ниже:</p>
+                    <input class="form-control" type="text" v-model="profession" placeholder="профессия">
+                    <br>
+                    <input class="form-control" type="text" v-model="city" placeholder="город">
+                    <br>
+                    <input class="form-control" type="text" v-model="photoUrl" placeholder="ссылка на фото">
+                    <br>
+                    <input class="form-control" type="text" v-model="fullname" placeholder="фио">
+                    <br>
+                    <input class="form-control" type="text" v-model="phoneNumber" placeholder="телефон">
+                    <br>
+                    <input type="email" v-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">
+                    <br>
+                    <div>
+                        <label for="example-datepicker">Дата рождения</label>
+                        <input class="example-datepicker" type="date" v-model="birthdayDate" id="date-input">
+                    </div>
+                    <br>
+                    <input class="form-control" type="text" v-model="education" placeholder="образование">
+                    <br>
+                    <input class="form-control" type="text" v-model="desiredSalary" placeholder="желаемая зарплата">
+                    <br>
+                    <input class="form-control" type="text" v-model="keySkills" placeholder="ключевые навыки">
+                    <br>
+                    <label for="form-control">О себе</label>
+                    <textarea class="form-control" v-model="about" id="textareaid" rows="5"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <img alt="Bootstrap Image Preview" :src=photoUrl width="200" height="255"/>
+                              </div>
+                            
+                            <h3 class="text-center">
+                                {{ profession }}
+                            </h3> 
+                            <address>
+                                <br /> Город: {{city}}<br /> <abbr title="Phone">Телефон:</abbr> {{ phoneNumber }} <br>
+                                <abbr title="Email">Email:</abbr> {{email}}
+                            </address>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="text-center">
+                                {{ fullname}}
+                            </h3>
+                            <!-- <h3 class="text-center">
+                                h3. Lorem ipsum dolor sit amet.
+                            </h3> -->
+                        </div>
+                    </div>
+                    <dl>
+                        <dt>
+                            Дата рождения:
+                        </dt>
+                        <dd>
+                            {{ birthdayDate }}
+                        </dd>
+                        <dt>
+                            Образование:
+                        </dt>
+                        <dd>
+                            {{ education }}
+                        </dd>
+                        <dt>
+                            Желаемая зарплата:
+                        </dt>
+                        <dd>
+                            {{ desiredSalary }}
+                        </dd>
+                        <dt>
+                            Ключевые навыки:
+                        </dt>
+                        <dd>
+                            {{ keySkills }}
+                        </dd>
+                    </dl>
+                    <h3>
+                        О себе:
+                    </h3>
+                    <p  style="white-space: pre-line;">
+                        {{ about }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type = "text/javascript" src = "script.js"></script>
+   </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+   <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Task 1</title>
+    <script type = "text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+   </head>
+   <body>
+      <div id = "vue_det">
+        <select name="LeaveType" @change="onChange($event)" class="form-control" v-model="key">
+            <option selected value="1">футы в метры</option>
+            <option value="2">морские мили в километры</option>
+            <option value="3">градусы в радианы</option>
+            <option value="4">температуру по Цельсию в температуру по Фаренгейту</option>
+         </select>
+        <input type = "number" step="any" v-model = "input" /> <br/><br/>
+        <h1>{{convertInput}}</h1>
+      </div>
+      <script type = "text/javascript" src = "task1.js"></script>
+   </body>
+</html>
